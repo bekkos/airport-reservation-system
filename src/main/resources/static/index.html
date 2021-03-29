@@ -21,7 +21,7 @@
                     <li>DESTINATIONS</li>
                     <li>ROUTES</li>
                 </ul>
-                <h2 class="title">AirFly</h2>
+                <h2 class="title">Bekkos Airlines</h2>
                 <ul>
                     <li>RESERVATIONS</li>
                     <li>ABOUT</li>
@@ -31,7 +31,7 @@
         </div>
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-6 mx-auto text-center">
-                <form action="" class="form mt-5">
+                <form class="form mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
@@ -64,10 +64,10 @@
                             <div class="form-group mt-5">
                                 <label for="departure">Departure from</label>
                                 <select name="Departure" class="form-select" id="departure">
-                                    <option selected>Click to open</option>
-                                    <option value="1">Værnes Airport</option>
-                                    <option value="2">Gardemoen Airport</option>
-                                    <option value="3">Bodø Airport</option>
+                                    <option selected>Choose airport</option>
+                                    <option value="Værnes Airport">Værnes Airport</option>
+                                    <option value="Gardemoen Airport">Gardemoen Airport</option>
+                                    <option value="Bodø Airport">Bodø Airport</option>
                                 </select>
                             </div>
                         </div>
@@ -75,10 +75,10 @@
                             <div class="form-group mt-5">
                                 <label for="arrival">Arrival at</label>
                                 <select name="Departure" class="form-select" id="arrival">
-                                    <option selected>Click to open</option>
-                                    <option value="1">Værnes Airport</option>
-                                    <option value="2">Gardemoen Airport</option>
-                                    <option value="3">Bodø Airport</option>
+                                    <option selected>Choose airport</option>
+                                    <option value="Værnes Airport">Værnes Airport</option>
+                                    <option value="Gardemoen Airport">Gardemoen Airport</option>
+                                    <option value="Bodø Airport">Bodø Airport</option>
                                 </select>
                             </div>
                         </div>
@@ -86,15 +86,15 @@
                     <div class="row mt-5">
                         <div class="col">
                             <div class="form-group">
-                                <label for="start">Departure date:</label>
-                                <input type="date" id="start" name="trip-start"
-                                       value="2021-03-29"
-                                       min="2021-03-29" max="2022-03-29">
+                                <label for="departureDate">Departure date:</label>
+                                <input type="date" id="departureDate" name="trip-start"
+                                       value="2019-03-29"
+                                       min="2019-03-29">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
-                                <input type="submit" class="btn btn-success" value="Order ticket">
+                                <button class="btn btn-success" onclick="onOrderSubmit();">Order</button>
                             </div>
                         </div>
                     </div>
@@ -106,6 +106,24 @@
                     </div>
 
                 </form>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center flex-wrap flex-column">
+            <div class="col-10">
+                <table id="orderList" class="table table-striped">
+                    <thead>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Date</th>
+                    </thead>
+                    <tbody id="orderListBody">
+
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
