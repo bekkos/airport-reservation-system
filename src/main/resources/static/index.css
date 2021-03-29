@@ -1,0 +1,18 @@
+.header {
+    height: 75px;
+    background: red;
+}
+
+.title {
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline;
+    color: white;
+    margin: 0 10px;
+}
