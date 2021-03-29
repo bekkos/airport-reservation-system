@@ -14,21 +14,19 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 header d-flex flex-column align-items-center justify-content-center flex-wrap">
-                <ul>
-                    <li>HOME</li>
-                    <li>DESTINATIONS</li>
-                    <li>ROUTES</li>
-                </ul>
-                <h2 class="title">Bekkos Airlines</h2>
-                <ul>
-                    <li>RESERVATIONS</li>
-                    <li>ABOUT</li>
-                    <li>CONTACT</li>
-                </ul>
+        <nav class="navbar navbar-light bg-light">
+            <div class="col text-center">
+                <span class="navbar-text nb-item">HOME</span>
+                <span class="navbar-text nb-item">DESTINATIONS</span>
             </div>
-        </div>
+            <div class="col text-center">
+                <h1 class="title">AirFly</h1>
+            </div>
+            <div class="col text-center">
+                <span class="navbar-text nb-item">RESERVATIONS</span>
+                <span class="navbar-text nb-item">ABOUT</span>
+            </div>
+        </nav>
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-6 mx-auto text-center">
                 <form class="form mt-5">
@@ -36,13 +34,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="first_name">First name</label>
-                                <input id="first_name" type="text" class="form-control">
+                                <input id="first_name" type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="last_name">Last name</label>
-                                <input id="last_name" type="text" class="form-control">
+                                <input id="last_name" type="text" class="form-control" required>
                             </div>
                         </div>
                     </div>
@@ -50,12 +48,12 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input id="email" type="email" class="form-control">
+                                <input id="email" type="email" class="form-control" required>
                             </div>
                         </div>
                         <div class="col">
                             <label for="phone">Phone number</label>
-                            <input id="phone" type="text" class="form-control">
+                            <input id="phone" type="text" class="form-control" required>
                         </div>
                     </div>
 
@@ -63,7 +61,7 @@
                         <div class="col">
                             <div class="form-group mt-5">
                                 <label for="departure">Departure from</label>
-                                <select name="Departure" class="form-select" id="departure">
+                                <select name="Departure" class="form-select" id="departure" required>
                                     <option selected>Choose airport</option>
                                     <option value="Værnes Airport">Værnes Airport</option>
                                     <option value="Gardemoen Airport">Gardemoen Airport</option>
@@ -74,7 +72,7 @@
                         <div class="col">
                             <div class="form-group mt-5">
                                 <label for="arrival">Arrival at</label>
-                                <select name="Departure" class="form-select" id="arrival">
+                                <select name="Departure" class="form-select" id="arrival" required>
                                     <option selected>Choose airport</option>
                                     <option value="Værnes Airport">Værnes Airport</option>
                                     <option value="Gardemoen Airport">Gardemoen Airport</option>
@@ -89,7 +87,7 @@
                                 <label for="departureDate">Departure date:</label>
                                 <input type="date" id="departureDate" name="trip-start"
                                        value="2019-03-29"
-                                       min="2019-03-29">
+                                       min="2019-03-29" required>
                             </div>
                         </div>
                         <div class="col">
