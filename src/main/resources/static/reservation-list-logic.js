@@ -1,3 +1,5 @@
+var ordersInList = [];
+
 function updateOrderList() {
     $.get("/getOrders", function(data) {
         const tableBody = document.getElementById('orderListBody')
@@ -15,6 +17,7 @@ function updateOrderList() {
                     <td><button class="btn btn-danger" id="${i}" onclick="deleteMe(this.id);">Cancel</button></td>
                 </tr>
             `;
+            ordersInList.push(data[i]);
         }
         tableBody.innerHTML = tableHTML;
     })
@@ -25,7 +28,11 @@ setInterval(function() {
 },500);
 
 function deleteMe(id) {
-    $.get("/delete?id="+id, () => {
+    console.log(ordersInList[id]);
+    console.log("ID:" + id);
+    $.post("/delete", ordersInList[id], () => {
         updateOrderList();
+        ordersInList.splice(id, 1);
     });
 }
+

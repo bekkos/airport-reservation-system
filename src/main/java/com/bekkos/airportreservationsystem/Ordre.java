@@ -2,7 +2,7 @@ package com.bekkos.airportreservationsystem;
 
 public class Ordre {
 
-
+    private String customerId;
     private String firstName;
     private String lastName;
     private String email;
@@ -11,7 +11,12 @@ public class Ordre {
     private String arrival;
     private String departureDate;
 
-    public Ordre(String firstName, String lastName, String email, String phone, String departure, String arrival, String departureDate) {
+    public Ordre() {
+
+    }
+
+    public Ordre(String customerId, String firstName, String lastName, String email, String phone, String departure, String arrival, String departureDate) {
+        this.customerId = customerId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -19,6 +24,14 @@ public class Ordre {
         this.departure = departure;
         this.arrival = arrival;
         this.departureDate = departureDate;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String id) {
+        this.customerId = id;
     }
 
     public String getFirstName() {

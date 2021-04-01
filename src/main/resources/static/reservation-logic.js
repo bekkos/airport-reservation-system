@@ -41,6 +41,7 @@ function onOrderSubmit() {
 
     if(passed) {
         const order = {
+            customerId: 0,
             firstName: firstName,
             lastName: lastName,
             email: email,
