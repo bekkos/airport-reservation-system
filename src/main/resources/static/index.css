@@ -1,5 +1,5 @@
 .header {
-    height: 75px;
+
     background: red;
 }
 
@@ -13,6 +13,11 @@
     margin: 0 10px;
 }
 
-.nb-item:hover {
+.nb-item:hover, a:hover {
     color: #303030;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }

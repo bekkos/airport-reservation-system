@@ -16,14 +16,14 @@
     <div class="container-fluid">
         <nav class="navbar navbar-light bg-light">
             <div class="col text-center">
-                <span class="navbar-text nb-item">HOME</span>
-                <span class="navbar-text nb-item">DESTINATIONS</span>
+                <span class="navbar-text nb-item"><a href="/">HOME</a></span>
+                <span class="navbar-text nb-item"><a href="/">DESTINATIONS</a></span>
             </div>
             <div class="col text-center">
                 <h1 class="title">AirFly</h1>
             </div>
             <div class="col text-center">
-                <span class="navbar-text nb-item">RESERVATIONS</span>
+                <span class="navbar-text nb-item"><a href="/reservations">RESERVATIONS</a></span>
                 <span class="navbar-text nb-item">ABOUT</span>
             </div>
         </nav>
@@ -93,6 +93,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <button class="btn btn-success" onclick="onOrderSubmit();">Order</button>
+                                <p id="msg"></p>
                             </div>
                         </div>
                     </div>
@@ -106,24 +107,7 @@
                 </form>
             </div>
         </div>
-        <div class="row d-flex align-items-center justify-content-center flex-wrap flex-column">
-            <div class="col-10">
-                <table id="orderList" class="table table-striped">
-                    <thead>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Departure</th>
-                        <th>Arrival</th>
-                        <th>Date</th>
-                    </thead>
-                    <tbody id="orderListBody">
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </div>
 </body>
 </html>

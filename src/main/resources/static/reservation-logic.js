@@ -49,6 +49,7 @@ function onOrderSubmit() {
             arrival: arrival,
             departureDate: departureDate
         }
+        document.getElementById("msg").innerText = "Order complete.";
         passToServer(order);
     } else {
         displayErrorMessage(errorsIn);
@@ -59,7 +60,7 @@ function onOrderSubmit() {
 
 function passToServer(order) {
     $.post("/submitOrder", order, function() {
-        updateOrderList();
+
     });
 }
 
@@ -69,24 +70,3 @@ function displayErrorMessage(errorsIn) {
 
 }
 
-function updateOrderList() {
-    $.get("/getOrders", function(data) {
-        console.log(data);
-        const tableBody = document.getElementById('orderListBody')
-        let tableHTML = "";
-        for(let i = 0; i<data.length;i++) {
-            tableHTML += `
-                <tr>
-                    <td>${data[i].firstName}</td>
-                    <td>${data[i].lastName}</td>
-                    <td>${data[i].email}</td>
-                    <td>${data[i].phone}</td>
-                    <td>${data[i].departure}</td>
-                    <td>${data[i].arrival}</td>
-                    <td>${data[i].departureDate}</td>
-                </tr>
-            `;
-        }
-        tableBody.innerHTML = tableHTML;
-    })
-}
