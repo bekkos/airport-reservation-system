@@ -61,7 +61,7 @@
                         <div class="col">
                             <div class="form-group mt-5">
                                 <label for="departure">Departure from</label>
-                                <select name="Departure" class="form-select" id="departure" required>
+                                <select name="Departure" class="form-select" id="departure" onchange="destinationArrivalValidater();" required>
                                     <option selected>Choose airport</option>
                                     <option value="Værnes Airport">Værnes Airport</option>
                                     <option value="Gardemoen Airport">Gardemoen Airport</option>
@@ -72,12 +72,13 @@
                         <div class="col">
                             <div class="form-group mt-5">
                                 <label for="arrival">Arrival at</label>
-                                <select name="Departure" class="form-select" id="arrival" required>
+                                <select name="Departure" class="form-select" id="arrival" onchange="destinationArrivalValidater();" required>
                                     <option selected>Choose airport</option>
                                     <option value="Værnes Airport">Værnes Airport</option>
                                     <option value="Gardemoen Airport">Gardemoen Airport</option>
                                     <option value="Bodø Airport">Bodø Airport</option>
                                 </select>
+                                <p id="arrivalErrorMsg"></p>
                             </div>
                         </div>
                     </div>

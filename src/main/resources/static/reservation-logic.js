@@ -56,8 +56,15 @@ function onOrderSubmit() {
     }
 }
 
-// TODO: Serverkommunikasjon.
+function destinationArrivalValidater() {
+    if($('#departure').val() == $('#arrival').val() && $("#departure").val() != "Choose airport") {
+        $('#arrival').val("Choose airport");
+        $("#arrivalErrorMsg").text("Arrival and departure cannot be the same");
+    }
+}
 
+
+// TODO: Serverkommunikasjon.
 function passToServer(order) {
     $.post("/submitOrder", order, function() {
 
@@ -65,8 +72,11 @@ function passToServer(order) {
 }
 
 // TODO: Vis feilmeldinger ved failet inputvalidering.
-
 function displayErrorMessage(errorsIn) {
 
 }
+
+setInterval(function () {
+    destinationArrivalValidater();
+},50)
 
